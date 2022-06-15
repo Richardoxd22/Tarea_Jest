@@ -1,4 +1,6 @@
-import{CalcProdTotal,CalcSubTotal,CalcTotalT,sumar} from "./app";
+import{Factura1,sumar} from "./app";
+
+const factura1 = new Factura1();
 describe("Functions Randoms",()=>{
 
 test('debe sumar[10] y [20] devolver [30] con la funcion sumar',()=>{
@@ -29,7 +31,7 @@ test('Debe multiplicar [3] y [1.25] y devolver [3.75]', ()=>{
 
     let resultado:number
 
-    resultado = CalcProdTotal(cantidad,precio)
+    resultado = factura1.CalcProdTotal(cantidad,precio)
 
 
     expect(
@@ -37,15 +39,14 @@ test('Debe multiplicar [3] y [1.25] y devolver [3.75]', ()=>{
     ).toBe(resultadoExpected)
 })
 
-test('Debe sumar [1] + [1.10] + [1.20] y devolver [3.30]',()=>{
+test('Debe sumar [1] + [1.10] y devolver [2.10]',()=>{
     const precio1 = 1
-    const precio2= 1.10
-    const precio3= 1.20
-    const resultExpected= 3.30
+    const precio2= 1.10    
+    const resultExpected= 2.10
 
     let result: number
 
-    result = CalcSubTotal(precio1,precio2,precio3)
+    result = factura1.CalcSubTotal(precio1,precio2)
 
     expect(
         result
@@ -58,11 +59,32 @@ test('La multicapliacion [3.50] con [0.12] y el resultado debe sumar [3.50] y de
     const resultExpected =3.92
     let result: number
 
-    result = CalcTotalT(subtotal)
+    result = factura1.CalcTotalT(subtotal)
 
     expect(
         result
     ).toBe(resultExpected)
 })
 
+
+test("verificamos que imprima la factura con los datos",()=>{
+    factura1.ingresarproducto({id:"2",nombreprodc:"pan",precio:1.25,cant:3})
+    const ingprod= factura1.findproducto(factura1.productos[0].nombreprodc)
+    expect(ingprod).toEqual(
+        expect.objectContaining({
+            "id":"2",
+            "cant":3,
+            "nombreprodc":"pan",
+            "precio":1.25
+        })
+    )
+    const expected= expect.any(String)
+    
+})
+
+test("devolvemos para imprimir",()=>{
+    factura1.ingresarproducto({id:"2",nombreprodc:"pan",precio:1.25,cant:3});
+    const findnomb = jest.fn()
+    factura1.findproducto(findnomb);
+    })
 })
