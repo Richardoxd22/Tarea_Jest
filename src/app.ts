@@ -22,9 +22,9 @@ export class Factura1 {
         this.productos.push(producto);
     }else{
         var concidencia = this.findproducto((enc:Producto)=>enc.nombreprodc==producto.nombreprodc);
-        if(concidencia != undefined){
-            concidencia.cant=this.CalcProdTotal(concidencia.cant,producto.precio);       
-            concidencia.cant=this.CalcSubTotal(concidencia.cant,producto.precio);
+        if(concidencia !== undefined){
+            console.log("no entra");
+            
         }else{
             producto.subtotal=producto.cant*producto.precio;
             this.productos.push(producto);
