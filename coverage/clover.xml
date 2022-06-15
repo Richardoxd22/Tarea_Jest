@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655251058385" clover="3.2.0">
-  <project timestamp="1655251058385" name="All files">
-    <metrics statements="32" coveredstatements="30" conditionals="4" coveredconditionals="3" methods="13" coveredmethods="12" elements="49" coveredelements="45" complexity="0" loc="32" ncloc="32" packages="2" files="2" classes="2"/>
+<coverage generated="1655252350545" clover="3.2.0">
+  <project timestamp="1655252350545" name="All files">
+    <metrics statements="37" coveredstatements="35" conditionals="4" coveredconditionals="3" methods="13" coveredmethods="12" elements="54" coveredelements="50" complexity="0" loc="37" ncloc="37" packages="2" files="2" classes="2"/>
     <package name="dist">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="app.js" path="C:\Users\richa\Desktop\BPCapacitacion\ejericiosfront\Tarea_Jest\dist\app.js">
@@ -19,9 +19,9 @@
       </file>
     </package>
     <package name="src">
-      <metrics statements="22" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="9" coveredmethods="8"/>
+      <metrics statements="27" coveredstatements="25" conditionals="4" coveredconditionals="3" methods="9" coveredmethods="8"/>
       <file name="app.ts" path="C:\Users\richa\Desktop\BPCapacitacion\ejericiosfront\Tarea_Jest\src\app.ts">
-        <metrics statements="22" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="9" coveredmethods="8"/>
+        <metrics statements="27" coveredstatements="25" conditionals="4" coveredconditionals="3" methods="9" coveredmethods="8"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -39,11 +39,16 @@
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="37" count="4" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
       </file>
     </package>
   </project>

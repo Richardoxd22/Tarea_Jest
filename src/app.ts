@@ -42,7 +42,8 @@ export class Factura1 {
     }
 
     CalcTotalT(subtotal:number):number{
-        return (subtotal * 0.12)+ subtotal
+        var subtotal1 = (subtotal * 0.12)+ subtotal;
+        return subtotal1;
     }
     //calcular la cantidad
     CalcSubTotal(producto1: number, producto2:number ){
@@ -54,6 +55,10 @@ export class Factura1 {
 
 
 var factura =new Factura1();
+console.log("Nombre a quien sale la factura",factura.nombrecli);
+console.log("el subtotal del producto sin iva",factura.CalcSubTotal(1,1.10));
+console.log("el total del producto con iva",factura.CalcTotalT(2.10).toFixed(2));
+console.log("Total a pagar",factura.CalcProdTotal(3,1.25).toFixed(2));
 
 
 
